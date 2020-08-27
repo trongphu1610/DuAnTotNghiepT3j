@@ -11,7 +11,11 @@
     <string name="title_top">Top</string>
     <string name="title_share">Share</string>
     <string name="title_password">Password</string>
+    <string name="title_password_again">Please enter your password </string>
     <string name="title_username">Username</string>
+    <string name="title_top">Top</string>
+    <string name="title_album">Album</string>
+    <string name="title_person">Person</string>
 
 
 </resources>

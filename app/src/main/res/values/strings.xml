@@ -1,3 +1,17 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">Music Chill</string>
+    <string name="title_registrion">Registration</string>
+    <string name="title_login">Login</string>
+    <string name="title_personal">Personal</string>
+    <string name="title_song">Song</string>
+    <string name="title_album">Album</string>
+    <string name="title_singer">Singer</string>
+    <string name="title_favorite">Favorite</string>
+    <string name="title_home">Home</string>
+    <string name="title_top">Top</string>
+    <string name="title_share">Share</string>
+    <string name="title_password">Password</string>
+    <string name="title_username">Username</string>
+
+
 </resources>

@@ -2,7 +2,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/item_album"
-        android:icon="@drawable/album"
+        android:icon="@drawable/albumlogo"
         android:title="@string/title_album"/>
     <item
         android:id="@+id/item_rank"

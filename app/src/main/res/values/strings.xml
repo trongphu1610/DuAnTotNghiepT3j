@@ -14,6 +14,13 @@
     <string name="title_password_again">Please enter your password </string>
     <string name="title_username">Username</string>
     <string name="title_person">Person</string>
+    <string name="title_doi_mat_khau">Đổi Mật Khẩu</string>
+    <string name="title_log_out">Log Out</string>
+    <string name="title_yes">Yes</string>
+    <string name="title_no">NO</string>
+    <string name="title_content_logout">Bạn có chắc chắn đăng xuất không ? Yes or No</string>
+    <string name="title_logout">Đăng Xuất</string>
+    <string name="title_thongtin">Thông tin</string>
 
 
 </resources>

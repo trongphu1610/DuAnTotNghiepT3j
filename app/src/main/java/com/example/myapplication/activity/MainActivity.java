@@ -4,27 +4,44 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
+import android.app.Dialog;
+import android.content.Context;
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
+import android.widget.Toast;
 
 import com.example.myapplication.R;
+import com.example.myapplication.adapter.AdapterSong;
+import com.example.myapplication.api.SongUtil;
 import com.example.myapplication.fragment.FragmentAlbum;
 import com.example.myapplication.fragment.FragmentFavorite;
 import com.example.myapplication.fragment.FragmentPersonal;
 import com.example.myapplication.fragment.FragmentSinger;
 import com.example.myapplication.fragment.FragmentTop;
 
+import com.example.myapplication.model.Songg;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 
 public class MainActivity extends AppCompatActivity {
     private BottomNavigationView navigationView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,8 +54,9 @@ public class MainActivity extends AppCompatActivity {
             getSupportFragmentManager().beginTransaction().add(R.id.fl_container, new FragmentAlbum()).commit();
 
         }
-         navigationView = findViewById(R.id.nav_bottom);
-         navigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+
+        navigationView = findViewById(R.id.nav_bottom);
+        navigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 Fragment selectedFragment = null;
@@ -65,4 +83,27 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    public void Changer_PassWord(View view) {
+        Context context;
+        Dialog dialog = new Dialog(this);
+        dialog.setContentView(R.layout.dialog_logout);
+        dialog.show();
+        Button btnOkButton = dialog.findViewById(R.id.btn_ok);
+        btnOkButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,ActivityLogin.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+        Button btnCancel = dialog.findViewById(R.id.btn_cancel);
+        btnCancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dialog.cancel();
+            }
+        });
+
+    }
 }

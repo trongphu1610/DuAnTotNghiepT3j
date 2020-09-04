@@ -36,6 +36,7 @@
         android:layout_marginBottom="@dimen/dimention_16dp"
         android:fontFamily="@font/belli"
         android:hint="@string/title_username"
+        android:maxLength="25"
         android:inputType="textPersonName"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/edt_password"
@@ -51,6 +52,7 @@
         android:layout_marginTop="@dimen/dimention_16dp"
         android:layout_marginEnd="@dimen/dimention_48dp"
         android:fontFamily="@font/belli"
+        android:maxLength="25"
         android:hint="@string/title_password"
         android:inputType="textPassword"
         android:textStyle="bold"
@@ -62,22 +64,20 @@
         android:id="@+id/btn_login"
         android:layout_width="@dimen/dimention_250dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dimention_32dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/border_button_login"
         android:elevation="@dimen/dimention_250dp"
         android:fontFamily="@font/lantinwd"
         android:text="@string/title_login"
-        app:layout_constraintBottom_toTopOf="@+id/btn_registration"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edt_password" />
+        app:layout_constraintTop_toBottomOf="@+id/edt_email" />
 
     <Button
         android:id="@+id/btn_registration"
         android:layout_width="@dimen/dimention_250dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:layout_marginBottom="16dp"
         android:background="@drawable/border_button_login"
         android:elevation="@dimen/dimention_250dp"
@@ -85,7 +85,18 @@
         android:text="@string/title_registrion"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_login" />
+
+    <EditText
+        android:id="@+id/edt_email"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Mail"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="@+id/edt_password"
+        app:layout_constraintStart_toStartOf="@+id/edt_password"
+        app:layout_constraintTop_toBottomOf="@+id/edt_password" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,11 +7,16 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.example.myapplication.R;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class ActivityLogin extends AppCompatActivity {
-    private EditText edtUsername, edtPassword;
+
+    private EditText edtUsername, edtPassword,edtEmail;
     private Button btnLogin,btnRegistration;
 
     @Override
@@ -19,6 +24,7 @@ public class ActivityLogin extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         edtUsername = findViewById(R.id.edt_username);
+        edtEmail = findViewById(R.id.edt_email);
         edtPassword = findViewById(R.id.edt_password);
         btnLogin = findViewById(R.id.btn_login);
         btnLogin.setOnClickListener(new View.OnClickListener() {
@@ -33,10 +39,12 @@ public class ActivityLogin extends AppCompatActivity {
         btnRegistration.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ActivityLogin.this, ActivityRegistration.class);
+                Intent intent = new Intent(ActivityLogin.this,ActivityRegistration.class);
                 startActivity(intent);
+                finish();
             }
         });
-
     }
+
+
 }

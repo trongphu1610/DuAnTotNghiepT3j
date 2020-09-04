@@ -7,10 +7,4 @@
     android:background="@drawable/not_nhac_lua">
 
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="farorite" />
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
